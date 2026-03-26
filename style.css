@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --bg-deep: #0f172a;
+    --accent-glow: #3b82f6;
+    --accent-secondary: #8b5cf6;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --input-bg: rgba(0, 0, 0, 0.2);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    background-color: var(--bg-deep);
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%);
+    color: var(--text-main);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* --- Clean Futuristic Login --- */
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.glass-card {
+    width: 400px;
+    padding: 40px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.logo-area { margin-bottom: 30px; }
+.logo-area h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo-area p { color: var(--text-muted); font-size: 0.9rem; margin-top: 5px; }
+
+/* Modern Inputs */
+.input-group { margin-bottom: 20px; text-align: left; }
+.input-group label {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.input-group input:focus {
+    outline: none;
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Smooth Button */
+.btn-tech {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, var(--accent-glow), var(--accent-secondary));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-tech:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px var(--accent-glow);
+}
+
+/* --- Dashboard Styles --- */
+.dashboard-container { display: flex; height: 100vh; }
+
+.sidebar {
+    width: 260px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid var(--glass-border);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+.nav-item:hover, .nav-item.active {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-glow);
+}
+
+.main-area { flex: 1; padding: 40px; overflow-y: auto; }
+
+/* Tech Cards */
+.tech-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    /* Animation Setup */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+.tech-card h3 { margin-top: 0; font-weight: 400; color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+.tech-card .value { font-size: 2rem; font-weight: 600; margin-top: 5px; }
+
+/* HOVER EFFECT - This makes it glow and lift */
+.tech-card:hover {
+    transform: translateY(-7px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--accent-glow);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Clean Table - CORRECTED SECTION */
+table { width: 100%; border-collapse: separate; border-spacing: 0 8px; }
+th { text-align: left; color: var(--text-muted); padding: 15px; font-weight: 400; font-size: 0.9rem; }
+
+td { 
+    background: rgba(255,255,255,0.02); 
+    padding: 15px; 
+}
+
+/* These lines were broken in your old file - Fixed now */
+td:first-child { border-radius: 10px 0 0 10px; }
+td:last-child { border-radius: 0 10px 10px 0; }
+
+tr:hover td { background: rgba(255,255,255,0.05); }
+/* --- Event Poster Hover Effect --- */
+
+/* 1. Make the animation smooth */
+.event-poster {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer; /* Changes mouse to a hand icon */
+}
+
+/* 2. The Lift & Glow Action */
+.event-poster:hover {
+    transform: translateY(-7px); /* Lifts up */
+    border-color: var(--accent-glow); /* Glowing Blue Border */
+    box-shadow: 
+        0 20px 40px -5px rgba(0, 0, 0, 0.6), 
+        0 0 20px rgba(59, 130, 246, 0.5); /* Stronger Blue Glow */
+}
