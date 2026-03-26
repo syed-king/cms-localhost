@@ -1,0 +1,5 @@
+this is a cms (COLLEGE MANAGEMENT SYSTEM ) developed by syed faaiz
+this run on xampp localhos 
+db on 3307
+and everything normal 
+if you want to host the cms just chang the db according to you
